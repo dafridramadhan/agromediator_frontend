@@ -64,7 +64,7 @@ fun LoginScreen(navController: NavController) {
         ) {
             Spacer(modifier = Modifier.height(50.dp))
             Image(
-                painter = painterResource(id = R.drawable.welcome_icon),
+                painter = painterResource(id = R.drawable.logo_agroculture),
                 contentDescription = "Welcome Icon",
                 modifier = Modifier.size(150.dp)
             )
@@ -77,7 +77,7 @@ fun LoginScreen(navController: NavController) {
             OutlinedTextField(
                 value = email,
                 onValueChange = { email = it },
-                label = { Text("Alamat Email") },
+                label = { Text(" Email") },
                 colors = OutlinedTextFieldDefaults.colors(
                     focusedBorderColor = Color.Black,
                     unfocusedTextColor = Color.Black
@@ -109,6 +109,7 @@ fun LoginScreen(navController: NavController) {
             Spacer(modifier = Modifier.height(35.dp))
             Button(
                 onClick = {
+                    navController.navigate(Routes.home)
                 },
                 modifier = Modifier
                     .width(250.dp)

@@ -28,7 +28,7 @@ fun SplashScreen(onSplashComplete: () -> Unit) {
         contentAlignment = Alignment.Center
     ) {
         Image(
-            painter = painterResource(id = R.drawable.agromediator_logo),
+            painter = painterResource(id = R.drawable.logo_agroculture_removebg),
             contentDescription = "Agromediator Logo",
             modifier = Modifier.size(500.dp)
         )
