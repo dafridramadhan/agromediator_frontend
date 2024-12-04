@@ -45,7 +45,7 @@ fun HomePage() {
     Scaffold (
         topBar = {
             TopAppBar (
-                backgroundColor = Color(0xFFD6EFD8),
+                backgroundColor = Color(0xFF80AF81),
                 title = {
                     Text("Beranda")
                 },
@@ -91,7 +91,7 @@ fun HomeContentScreen(paddingValues: PaddingValues) {
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color(0xFFD6EFD8))
+            .background(Color.White)
             .padding(paddingValues),
     ) {
         SimpleSearchBar(
