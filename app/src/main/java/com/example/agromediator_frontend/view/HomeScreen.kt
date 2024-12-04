@@ -17,6 +17,7 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.navigation.NavController
+import androidx.navigation.Navigation
 import androidx.navigation.compose.rememberNavController
 import com.example.agromediator_frontend.model.NavItem
 
@@ -71,16 +72,15 @@ fun HomeScreen(navController: NavController) {
                 }
             }
         }
-    ) {
-            paddingValues -> ContentScreen(selectedIndex, paddingValues)
+    ) { paddingValues ->
+        ContentScreen(selectedIndex, paddingValues,navController)
     }
 }
 
 @Composable
-fun ContentScreen(selectedIndex: Int, paddingValues: PaddingValues) {
-    val navController = rememberNavController()
+fun ContentScreen(selectedIndex: Int, paddingValues: PaddingValues,navController: NavController) {
     when(selectedIndex) {
         0-> HomePage()
-        1-> ProfilePage()
+        1-> ProfilePage(navController)
     }
 }
