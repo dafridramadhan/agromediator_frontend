@@ -5,6 +5,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Person
+import androidx.compose.material.icons.filled.ShoppingCart
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.NavigationBar
@@ -27,7 +28,8 @@ fun HomeScreen(navController: NavController) {
 
     val navItemList = listOf(
         NavItem("Beranda", Icons.Default.Home),
-        NavItem("Profile", Icons.Default.Person)
+        NavItem("Troli", Icons.Default.ShoppingCart),
+        NavItem("Profile", Icons.Default.Person),
     )
 
     var selectedIndex by remember {
@@ -39,7 +41,7 @@ fun HomeScreen(navController: NavController) {
         containerColor = Color(0xFFD6EFD8),
         bottomBar = {
             NavigationBar (
-                containerColor = Color.White,
+                containerColor = Color.Gray,
             ) {
                 navItemList.forEachIndexed {
                         index, navItem ->
@@ -81,6 +83,7 @@ fun HomeScreen(navController: NavController) {
 fun ContentScreen(selectedIndex: Int, paddingValues: PaddingValues,navController: NavController) {
     when(selectedIndex) {
         0-> HomePage()
-        1-> ProfilePage(navController)
+        1-> TroliPage(navController)
+        2-> ProfilePage(navController)
     }
 }
