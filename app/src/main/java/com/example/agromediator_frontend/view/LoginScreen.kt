@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -20,6 +21,7 @@ import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -31,6 +33,7 @@ import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -38,6 +41,7 @@ import androidx.navigation.NavController
 import com.example.agromediator_frontend.R
 import kotlinx.coroutines.DelicateCoroutinesApi
 import com.example.agromediator_frontend.model.Routes
+import java.time.format.TextStyle
 
 @OptIn(DelicateCoroutinesApi::class)
 @Composable
@@ -106,7 +110,18 @@ fun LoginScreen(navController: NavController) {
                     onDone = { focusManager.clearFocus() }
                 )
             )
-            Spacer(modifier = Modifier.height(35.dp))
+            Spacer(modifier = Modifier.height(5.dp))
+            // Lupa password
+            TextButton(onClick = { navController.navigate(Routes.forget)}) {
+                Text(
+                    text = "Lupa Password ?",
+                    color = Color.Black,
+                    fontSize = 14.sp,
+                    modifier = Modifier.fillMaxWidth(),
+                    textAlign = TextAlign.End
+                )
+            }
+            Spacer(modifier = Modifier.height(5.dp))
             Button(
                 onClick = {
                     navController.navigate(Routes.home)
@@ -149,7 +164,7 @@ fun LoginScreen(navController: NavController) {
                     fontSize = 14.sp
                 )
                 Text(
-                    "Daftar",
+                    "Daftar Disini",
                     textDecoration = TextDecoration.Underline,
                     color = Color.Black,
                     fontSize = 14.sp,

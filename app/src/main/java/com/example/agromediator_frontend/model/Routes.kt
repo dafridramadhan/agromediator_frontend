@@ -5,4 +5,7 @@ object Routes {
     var login = "login"
     var register = "register"
     var home = "home"
+    var forget = "forget"
+    var Editprofile = "editprofile"
+    var Profile = "profile"
 }

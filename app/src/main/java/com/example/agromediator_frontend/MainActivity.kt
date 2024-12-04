@@ -16,8 +16,11 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.agromediator_frontend.model.Routes
 import com.example.agromediator_frontend.ui.theme.Agromediator_frontendTheme
+import com.example.agromediator_frontend.view.EditProfileScreen
+import com.example.agromediator_frontend.view.ForgetpasswordScreen
 import com.example.agromediator_frontend.view.HomeScreen
 import com.example.agromediator_frontend.view.LoginScreen
+import com.example.agromediator_frontend.view.ProfilePage
 import com.example.agromediator_frontend.view.RegisterScreen
 import com.example.agromediator_frontend.view.SplashScreen
 
@@ -54,6 +57,15 @@ fun AgromediatorApp() {
             }
             composable(Routes.home) {
                 HomeScreen(navController)
+            }
+            composable(Routes.forget){
+                ForgetpasswordScreen(navController)
+            }
+            composable(Routes.Editprofile){
+                EditProfileScreen(navController)
+            }
+            composable(Routes.Profile){
+                ProfilePage(navController)
             }
         }
     )
