@@ -100,9 +100,9 @@ fun TabItem(label: String, isSelected: Boolean) {
 @Composable
 fun ProductList() {
     Column(modifier = Modifier.padding(8.dp)) {
-        ProductItem(imageRes = R.drawable.kebun, description = "Apel Segar, Manis dan Renyah")
-        ProductItem(imageRes = R.drawable.pager_image, description = "Terong Ungu, Segar dan Sehat")
-        ProductItem(imageRes = R.drawable.agromediator_login_image, description = "Apel Segar, Manis dan Renyah")
+        ProductItem(imageRes = R.drawable.apel, description = "Apel Segar, Manis dan Renyah")
+        ProductItem(imageRes = R.drawable.terong_satu, description = "Terong Ungu, Segar dan enak")
+        ProductItem(imageRes = R.drawable.wortel, description = "Wortel, Sehat dan bergizi")
     }
 }
 

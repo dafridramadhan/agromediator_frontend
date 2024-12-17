@@ -82,7 +82,7 @@ fun HomeScreen(navController: NavController) {
 @Composable
 fun ContentScreen(selectedIndex: Int, paddingValues: PaddingValues,navController: NavController) {
     when(selectedIndex) {
-        0-> HomePage()
+        0-> HomePage(paddingValues = paddingValues)
         1-> TroliPage(navController)
         2-> ProfilePage(navController)
     }
