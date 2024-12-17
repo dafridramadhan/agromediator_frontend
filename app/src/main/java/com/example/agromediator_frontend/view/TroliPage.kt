@@ -113,7 +113,7 @@ fun DetailProduk() {
             .padding(16.dp)
     ) {
         Image(
-            painter = painterResource(id = R.drawable.kebun),
+            painter = painterResource(id = R.drawable.apel),
             contentDescription = "Gambar Produk",
             modifier = Modifier
                 .fillMaxWidth()
