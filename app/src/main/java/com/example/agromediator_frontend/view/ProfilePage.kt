@@ -20,8 +20,11 @@ import androidx.compose.material.Icon
 import androidx.compose.material.Scaffold
 import androidx.compose.material.Text
 import androidx.compose.material.TopAppBar
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ShoppingCart
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -50,6 +53,7 @@ fun ProfilePage(navController: NavController) {
                     Text("Profile Page")
                 },
                 navigationIcon = {
+
                     androidx.compose.material.IconButton(onClick = {
                         navController.navigate(Routes.home)
                     }) {
@@ -59,10 +63,23 @@ fun ProfilePage(navController: NavController) {
                         )
                     }
                 },
+                actions = {
+                    androidx.compose.material.IconButton(onClick = {
+                        navController.navigate(Routes.cart) // Navigate to cart screen
+                    }) {
+                        Icon(
+                            imageVector = Icons.Default.ShoppingCart,
+                            contentDescription = "Cart",
+                            tint = Color.White
+                        )
+                    }
+                },
                 modifier = Modifier.statusBarsPadding()
             )
         },
+
         modifier = Modifier.fillMaxSize()
+
     ){
             paddingValues ->
         Column(
