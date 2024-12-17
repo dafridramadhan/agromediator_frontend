@@ -8,4 +8,5 @@ object Routes {
     var forget = "forget"
     var Editprofile = "editprofile"
     var Profile = "profile"
+    var cart = "keranjang"
 }

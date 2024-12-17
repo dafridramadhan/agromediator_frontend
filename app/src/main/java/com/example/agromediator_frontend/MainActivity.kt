@@ -1,5 +1,6 @@
 package com.example.agromediator_frontend
 
+import KeranjangPage
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -66,6 +67,9 @@ fun AgromediatorApp() {
             }
             composable(Routes.Profile){
                 ProfilePage(navController)
+            }
+            composable(Routes.cart){
+                KeranjangPage(navController)
             }
         }
     )
